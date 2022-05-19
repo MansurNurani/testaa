@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { render } from "react-dom";
+//import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import MenuIcon from "@mui/icons-material/Menu";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  return (
+    <>
+      <Button
+        sx={{
+          width: "270px",
+          height: "270px",
+          borderRadius: "50% !important"
+        }}
+        color="success"
+        variant="contained"
+      >
+        <MenuIcon
+          sx={{
+            width: "90% !important",
+            height: "90% !important"
+          }}
+        />
+      </Button>
+    </>
+  );
+};
+
+render(<App />, document.getElementById("root"));
